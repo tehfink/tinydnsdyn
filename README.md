@@ -7,6 +7,7 @@ server 'tinydns' by Dan Bernstein.
   daemontools or similar
 - Administrative access to a \*nix box on you local network
 - Python installed on both client and server
+- Access to firewall (default port: 5300 TCP)
 
 ## Installation
 
