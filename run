@@ -1,10 +1,10 @@
 #!/bin/sh
 exec 2>&1
 
-freebsd="exec envuidgid tinydns /usr/local/bin/python tinydnsdyn --data-dir=/etc/tinydns/root ./passfile"
+freebsd="exec envuidgid tinydns /usr/local/bin/python /usr/local/bin/tinydnsdyn --data-dir=/etc/tinydns/root passfile"
 other="exec envuidgid tinydns ./tinydnsdyn --data-dir=/etc/tinydns/root ./passfile"
 
-if [ "$OSTYPE" = "FreeBSD" ]
+if [ `uname` = "FreeBSD" ]
     then
         $freebsd
 else
