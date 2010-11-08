@@ -63,9 +63,18 @@ To install on server:
 
     cd /usr/local/etc/
     git clone git://github.com/tehfink/tinydnsdyn.git
-    cd /usr/local/etc/tinydnsdyn
+    cd tinydnsdyn
     git checkout freebsd
     echo "yourpasswordhere" > /usr/local/etc/tinydnsdyn/passfile
     ln -s /usr/local/etc/tinydnsdyn/tinydnsdyn /usr/local/bin/tinydnsdyn
     ln -s /usr/local/etc/tinydnsdyn /var/service/
     sleep 5
+
+To install on client:
+
+    cd /usr/local/etc/
+    git clone git://github.com/tehfink/tinydnsdyn.git
+    cd tinydnsdyn
+    git checkout freebsd
+    echo "yourpasswordhere" > /usr/local/etc/tinydnsdyn/passfile
+    ln -s /usr/local/etc/tinydnsdyn/tinydnsdyn-client /usr/local/bin/tinydnsdyn-client
