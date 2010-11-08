@@ -50,3 +50,19 @@ Only the passfile option is required.
 The Python code is basic and inefficient but it should work. I take no
 responsibility for anything that may happen to any of your machines.
 That said, please let me know if there are any issues by creating a ticket on [my tracker](http://support.seconddrawer.com/projects/tinydnsdyn/).
+
+
+
+##FreeBSD
+On FreeBSD 8.1, the following install steps seemed to work. Using the FreeBSD branch here:
+https://github.com/tehfink/tinydnsdyn
+
+To install on server:
+cd /usr/local/etc/
+git clone git://github.com/tehfink/tinydnsdyn.git
+cd /usr/local/etc/tinydnsdyn
+git checkout freebsd
+echo "yourpasswordhere" > /usr/local/etc/tinydnsdyn/passfile
+ln -s /usr/local/etc/tinydnsdyn/tinydnsdyn /usr/local/bin/tinydnsdyn
+ln -s /usr/local/etc/tinydnsdyn /var/service/
+sleep 5
