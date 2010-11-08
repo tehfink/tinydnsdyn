@@ -1,3 +1,12 @@
 #!/bin/sh
 exec 2>&1
-exec envuidgid tinydns ./tinydnsdyn --data-dir=/etc/tinydns/root ./passfile
+
+freebsd="exec envuidgid tinydns /usr/local/bin/python tinydnsdyn --data-dir=/etc/tinydns/root ./passfile"
+other="exec envuidgid tinydns ./tinydnsdyn --data-dir=/etc/tinydns/root ./passfile"
+
+if [ "$OSTYPE" = "FreeBSD" ]
+    then
+        $freebsd
+else
+        $other
+fi
